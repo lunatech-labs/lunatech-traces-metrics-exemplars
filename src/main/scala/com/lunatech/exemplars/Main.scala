@@ -16,8 +16,8 @@ object Main extends App {
   DefaultExports.initialize()
 
   // Traces
-  val spansCollectorEndpoint = "http://otel-collector:4317"
-  val tracer: Tracer = Tracing.getTracer(spansCollectorEndpoint)
+  val collectorEndpoint = "http://otel-collector:4317"
+  val tracer: Tracer = Tracing.getTracer(collectorEndpoint)
 
   // Candy!!
   val candyFactory : ActorSystem[CandyFactoryCommand] = ActorSystem(CandyFactoryActor(tracer), "CandyFactoryActor")
