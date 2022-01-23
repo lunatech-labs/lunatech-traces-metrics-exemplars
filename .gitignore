@@ -1,0 +1,9 @@
+target/
+project/target
+.bsp/
+
+# IDE folders
+.idea/
+.metals/
+metals.sbt
+.vscode/
